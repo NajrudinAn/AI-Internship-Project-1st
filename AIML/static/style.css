@@ -1,0 +1,738 @@
+
+:root{
+    font-size: 1.1vw;
+    font-family: Lato;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.detail_user{
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgb(219, 219, 219);
+    border: 0.12em solid gray;
+    border-radius: 0.5em;
+    padding: 2em 1em;
+}
+
+.detail_user div p{
+    margin: 0.2em;
+}
+.users_data p{
+    font-weight: 600;
+}
+
+
+
+.menu{
+    margin-top: 0.3em;
+    margin-bottom: 0.15em;
+    background-color: rgb(236, 236, 236);
+    padding: 0.4em 0.4em 0.35em 0.3em;
+    font-size: 0.7em;
+    text-decoration: none;
+    display:inline-block;
+    border: 2px solid rgb(105, 105, 105);
+    border-radius: 4px;
+}
+.menu a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.828);
+    font-weight: 600;
+    margin: 0.1em 0.5em 0.1em 0;
+    background-color: rgb(41, 41, 65);
+    padding: 0.25em 0.8em;
+    border: 0.2em;
+    border-radius: 5px;
+}
+.menu a:hover{
+    background-color: rgb(83, 92, 137);
+}
+.menu a:active{
+    background-color: rgb(19, 27, 63);
+    color:rgb(41, 41, 65);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    
+    /* align-items: center; */
+
+}
+
+
+.projectName{ grid-area: projectName;}
+.dataInfo{ grid-area: dataInfo;}
+.model{ grid-area: model;margin-top: 0.3em;}
+.accuracy{ grid-area: accuracy; margin-top: 0.3em;}
+.testRes{ grid-area: testRes;margin-top: 0.3em;}
+.manualTest{ grid-area: manualTest;}
+.result{grid-area: result;}
+
+.training{
+    /* width: 34em; */
+    /* padding: 0.3em; */
+    margin-top: 0.3em;
+    margin-bottom: 10em;
+    border: 2px solid rgba(81, 81, 81, 0.924);
+    border-radius: 5px;
+    background-color: rgb(223, 223, 223);
+    display: grid;
+    grid-template-areas: 
+    'dataInfo dataInfo dataInfo model model accuracy'
+    'testRes testRes testRes testRes testRes accuracy'
+    'testRes testRes testRes testRes testRes accuracy'
+    'testRes testRes testRes testRes testRes accuracy'
+    'testRes testRes testRes testRes testRes accuracy'
+    'testRes testRes testRes testRes testRes accuracy'
+    'testRes testRes testRes testRes testRes accuracy'
+    'testRes testRes testRes testRes testRes accuracy'
+    'manualTest manualTest manualTest result result result'
+    'manualTest manualTest manualTest result result result'
+    ;
+
+}
+.projectName{
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin: 0.4em 0 0.5em 0em;
+    font-size: 1.1em;
+}
+.title{
+    font-size: 0.9em;
+    margin: 0.8em 0em 0.1em 1em;
+    text-decoration: underline;
+}
+
+.container{
+    margin: 0em 1em 0 1em;
+    background-color: rgb(255, 255, 255);
+    font-size: 0.85em;
+    padding: 0.5em 0 0.5em 0;
+    border-radius: 5px;
+    height: 70%;
+    box-shadow: 2px 2px 5px 1px rgba(5, 4, 4, 0.63);
+}
+.container p{
+    margin: 0.2em 0 0 1em;
+}
+
+
+
+
+
+.container-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#reload_btn{
+    position: absolute;
+    top:10%;
+    right: 10%;
+    background-color: rgb(194, 194, 194);
+    border:none;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(132, 132, 132);
+}
+
+#reload_btn:active{
+    box-shadow: 1px 1px 1px rgb(51, 51, 51);
+    background-color: rgb(139, 139, 139);
+
+}
+
+
+
+#accuracy{
+    height: 70%;
+    width: 70%;
+    position: relative;
+    top: -20px;
+    left:13px;
+    overflow: hidden;
+    margin-top: 14%;
+    margin-right: 10%;
+}
+
+.container-4 table{
+    margin: 0.2em 0 0.2em 0.9em;
+    border-collapse: collapse;
+    width: auto; 
+    margin: 0 auto; 
+
+}
+
+
+
+.container-4 table tr{
+    text-align: center;
+}
+.container-4 table th{
+    padding: 0.2em 0.4em;
+}
+
+
+.result{
+    margin: 1em 1em 0 0 ;
+}
+.container-5{
+    margin: 0.5em 0 0em 0;
+    
+}
+
+
+
+
+.manualTest{
+    margin: 0.5em 0 0 0em;
+
+}
+.manualTest form{
+    margin: 0.4em 1em 5em 1em ;
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 1px rgba(5, 4, 4, 0.63);
+}
+
+.input_field{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4%;
+}
+
+.input_field div{
+    width: 48%;
+    margin-top: 0.5em;
+}
+.input_field input{
+    padding: 0.5em;
+    border: 0.15em solid rgb(141, 141, 141);
+    border-radius: 5px;
+    width: 90%;
+    margin: 0.3em 0 0.3em 0;
+}
+.input_field select{
+    padding: 0.5em;
+    border: 0.15em solid rgb(141, 141, 141);
+    border-radius: 5px;
+    width: 92%;
+    margin: 0.3em 0 0.3em 0;
+    font-weight: 600;
+    color: rgb(88, 88, 88);
+}
+
+.input_field select option{
+    color: rgb(36, 36, 36);
+    font-weight: 600;
+}
+
+
+.input_field div label{
+    color: rgb(76, 76, 76);
+}
+
+form input[type=submit]{
+    /* background-color: ;
+     */
+    padding: 0.4em 2em;
+    border:2px solid rgb(10, 5, 30);
+    border-radius: 5px;
+    background-color: rgba(14, 14, 41, 0.931);
+    color: white;
+    font-size: 0.8em;
+    width: auto;
+
+}
+form input[type='submit']:hover{
+    border-radius: 5px;
+    background-color: rgba(87, 87, 119, 0.931);
+}
+
+form input[type='submit']:active{
+    border-radius: 5px;
+    background-color: rgba(14, 14, 15, 0.931);
+}
+.container-5{
+    font-size: 2em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+
+
+
+@media only screen and (min-width: 300px) {
+    .detail_user{
+        font-size: 3em;
+        padding: 0.3em 1em;
+    }
+    .detail_user .users_data{
+        width: 60%;
+    }
+    .detail_user .users_frame{
+        width: 30%;
+    }
+    .menu{
+        margin-top: 0.6em;
+        margin-bottom: 0.3em;
+        font-size: 3.5em;
+        border-radius: 5px;
+        padding: 0.5em 0 0.5em 0.5em;
+    }
+    .menu a{
+        margin: 1em 0.8em 1em 0;
+        border-radius: 5px;
+    }
+
+    main{
+        font-size: 3.5vw;
+    }
+    .training{
+
+        grid-template-areas: 
+            'dataInfo dataInfo dataInfo dataInfo'
+            'model model accuracy accuracy'
+            'testRes testRes testRes testRes'
+            'manualTest manualTest manualTest manualTest'
+            'manualTest manualTest manualTest manualTest'
+            'manualTest manualTest manualTest manualTest'
+            'manualTest manualTest manualTest manualTest'
+            'result result result result'
+            'result result result result'
+        ;
+    
+    }
+    
+    .container-4 table{
+        font-size: 0.8em;
+        /* width: 90vw; */
+    
+    }
+    
+    .container-1{
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        position: relative;
+        /* gap:10px; */
+        padding: 5em;
+    }
+    .container-1 .cont1_first{
+        width: 45%;
+    }
+    .container-1 .cont1_second{
+        position: relative;
+        left : -15px;
+        width: 70%;
+        
+
+    }
+    
+    .container-4 table tr{
+        text-align: center;
+    }
+    .container-4 table th{
+        padding: 0.2em 0.4em;
+        max-width: 3.5em; 
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+
+
+
+
+
+
+
+
+    #accuracy{
+        height: 140%;
+        width: 140%;
+        position: relative;
+        top: 30%;
+        left:2%;
+        overflow: hidden;
+    }
+
+    #reload_btn{
+        font-size: 1em;
+        border-radius: 5px;
+    }
+    .title{
+        font-size: 1em;
+        margin: 1em 0em 0.4em 1em;
+        text-decoration: underline;
+    }
+    .container{
+        margin: 0em 1em 0 1em;
+        background-color: rgb(255, 255, 255);
+        font-size: 0.85em;
+        padding: 0.5em 0 0.5em 0;
+        border-radius: 5px;
+        height: 70%;
+    }
+
+    .manualTest form{
+        margin: 0em 1em 0em 1em ;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .input_field{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 4%;
+    }
+    
+    .input_field div{
+        width: 48%;
+        margin-top: 0.5em;
+    }
+    
+
+    .result{
+        margin: 0em 0em 4em 0;
+
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+
+    .detail_user{
+        font-size: 2.1em;
+        padding: 0.3em 1em;
+    }
+    .detail_user .users_data{
+        width: 60%;
+    }
+    .detail_user .users_frame{
+        width: 30%;
+    }
+
+
+    .menu{
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        font-size: 2.4em;
+        border-radius: 8px;
+    }
+    .menu a{
+        margin: 0.25em 0.8em 0.25em 0;
+        border-radius: 8px;
+    }
+
+
+    main{
+        font-size: 3vw;
+    }
+
+    .container-4 table{
+        font-size: 0.8em;
+        /* width: 90vw; */
+    
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    .detail_user{
+        font-size: 1.6em;
+        padding: 0.3em 3em;
+    }
+    .detail_user .users_data{
+        width: 80%;
+    }
+    .detail_user .users_frame{
+        width: 14%;
+    }
+
+    main{
+        font-size: 2.1vw;
+
+    }
+
+    .menu{
+        margin-top: 0.6em;
+        margin-bottom: 0.3em;
+        font-size: 1.6em;
+        border-radius: 5px;
+        padding: 0.5em 0 0.5em 0.5em;
+    }
+    .training{
+
+        grid-template-areas: 
+            'dataInfo dataInfo dataInfo dataInfo dataInfo'
+            'model model model accuracy accuracy'
+            'testRes testRes testRes testRes testRes'
+            'manualTest manualTest manualTest manualTest manualTest'
+            'manualTest manualTest manualTest manualTest manualTest'
+            'result result result result result'
+            'result result result result result'
+        ;
+    
+    }
+    .container-1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        gap:8%;
+    }
+    
+    .container-4 table{
+        font-size: 1.1em;
+        /* width: 90vw; */
+    
+    }
+    .container-4 table th{
+        max-width: 4.4em; 
+
+    }
+
+}
+@media screen and (min-width: 1000px) {
+    .detail_user{
+        font-size: 1.5em;
+        padding: 0.7em 3.5em;
+    }
+    .detail_user .users_data{
+        width: 80%;
+    }
+    .detail_user .users_frame{
+        width: 14%;
+    }
+
+    .menu{
+        margin-top: 0.6em;
+        margin-bottom: 0.3em;
+        font-size: 1.5em;
+        border-radius: 5px;
+        padding: 0.5em 0 0.5em 0.5em;
+    }
+
+    main{
+        font-size: 1.8vw;
+    }
+
+    .training{
+        margin-top: 0.1em;
+        margin-bottom: 10em;
+        border: 2px solid rgba(81, 81, 81, 0.924);
+        border-radius: 5px;
+        background-color: rgb(223, 223, 223);
+        display: grid;
+        grid-template-areas: 
+        'dataInfo dataInfo dataInfo dataInfo model model model model'
+        'testRes testRes testRes testRes testRes accuracy accuracy accuracy'
+        'testRes testRes testRes testRes testRes accuracy accuracy accuracy'
+        'manualTest manualTest manualTest manualTest manualTest result result result'
+        'manualTest manualTest manualTest manualTest manualTest result result result'
+        ;
+    
+    }
+    .container-3{
+        width: 15em;
+    }
+    #accuracy{
+        height: 90%;
+        width: 90%;
+        position: relative;
+        top: 10%;
+        left:-5%;
+        /* overflow: hidden; */
+    }
+    #reload_btn{
+        font-size: 1.3em;
+        border-radius: 5px;
+    }
+    .container-4 table{
+        font-size: 1em;
+        /* width: 90vw; */
+    
+    }
+    .container-4 table th{
+        max-width: 4.6em; 
+
+    }
+
+    .result{
+        margin: 1em 0em 0 0 ;
+    }
+    .container-5{
+        margin: 0.5em 1em 0em 1em;
+        
+    }
+
+    .manualTest{
+        margin: 1em 0 0 0em;
+
+    }
+
+    .manualTest form{
+        margin: 0.5em 1em 3em 1em ;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .detail_user{
+        font-size: 1.2em;
+    }
+
+    .menu{
+        font-size: 1.2em;
+    }
+
+    main{
+        font-size: 1.3vw;
+    }
+    .container-4 table{
+        font-size: 1.2em;
+        /* width: 90vw; */
+    
+    }
+
+    .container-4 table th{
+        max-width: 6em; 
+
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .detail_user{
+        font-size: 0.7em;
+    }
+
+    .menu{
+        font-size: 0.7em;
+    }
+
+    main{
+        font-size: 1vw;
+    }
+
+    .result{
+        margin: 0.5em 0.3em 0 0 ;
+    }
+    .container-5{
+        margin: 0.5em 1em 0em 1em;
+        
+    }
+    .container-4 table{
+        font-size: 1em;
+        /* width: 90vw; */
+    
+    }
+
+    .container-4 table{
+        margin: 0.3em 0 0.3em 0.4em;
+
+    
+    }
+    
+    
+    
+    .container-4 table tr{
+        text-align: center;
+    }
+    .container-4 table th{
+        padding: 0.6em 2em;
+        max-width: 8em; 
+
+    }
+
+    .container-4 table{
+        margin: 0.2em 0 0em 0.9em;
+        
+    }
+
+
+
+
+    .manualTest{
+        margin: 0.5em 0 0 0em;
+
+    }
+    .container{
+        font-size: 0.81em;
+        padding: 0.5em 0 0.5em 0;
+ 
+    }
+
+    .training{
+        /* width: 34em; */
+        /* padding: 0.3em; */
+        margin-top: 0.1em;
+        margin-bottom: 10em;
+        border: 2px solid rgba(81, 81, 81, 0.924);
+        border-radius: 5px;
+        background-color: rgb(223, 223, 223);
+        display: grid;
+        grid-template-areas: 
+        'dataInfo dataInfo dataInfo dataInfo model model model model'
+        'testRes testRes testRes testRes testRes testRes accuracy accuracy'
+        'testRes testRes testRes testRes testRes testRes accuracy accuracy'
+        'manualTest manualTest manualTest manualTest manualTest manualTest result result'
+        'manualTest manualTest manualTest manualTest manualTest manualTest result result'
+        ;
+    
+    }
+
+    .container-3{
+        padding: 0;
+    }
+    .container-4{
+        padding: 0.2em 0.2em 0 0.1em;
+    }
+
+    
+    #accuracy{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 1%;
+        left:-5%;
+        /* overflow: hidden; */
+    }
+    #reload_btn{
+        font-size: 1.3em;
+        border-radius: 5px;
+    }
+
+    .manualTest form{
+        margin: 0.5em 1em 5em 1em ;
+        background-color: rgb(255, 255, 255);
+    }
+}
