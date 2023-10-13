@@ -114,13 +114,19 @@ class project_model:
 
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # For Project directory Path
-
 class projects:
+    def __init__(self):
+        self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)) # For Project directory Path
+        self.dataset_paths = {
+            'project1': os.path.join(self.base_dir, 'DataSets', 'bmd.csv'),         # Project 1 dataset path
+            'project2': os.path.join(self.base_dir, 'DataSets', 'churn_data.csv')   # project 2 dataset path
+    }
+        
     def project1(self):
-        path = os.path.join(BASE_DIR, 'DataSets', 'bmd.csv') # Path of dataset on DataSets directory
+        
     #    path = 'E:\project\Internship\Project\Intern_Project\DataSets\bmd.csv'         #Datasets Path
         
+        path = self.dataset_paths['project1']  # Path of dataset
         projectName = 'Predict fracture or not using KNN'
         self.project1 = project_model(path)
         self.project1.projectName(projectName)
@@ -131,9 +137,10 @@ class projects:
         self.project1.trainModel(KNeighborsClassifier(n_neighbors=12))
 
     def project2(self):
-        path = os.path.join(BASE_DIR, 'DataSets', 'churn_data.csv') # Path of dataset on DataSets directory
+        
     #    path = 'E:\project\Internship\Project\Intern_Project\DataSets\churn_data.csv'         #Datasets Path
         
+        path = self.dataset_paths['project2'] # Path of dataset
         projectName = 'Customer Churn Prediction using Logistic Regression'
         self.project2 = project_model(path)
         self.project2.projectName(projectName)
@@ -150,54 +157,5 @@ class projects:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # def serialize(self):
-    #     # Serialize the project_model instance to bytes
-    #     return pickle.dumps(self)
-
-    # @classmethod
-    # def deserialize(cls, data):
-    #     # Deserialize bytes back into a projects instance
-    #     return pickle.loads(data)
-
-
-
-
-
-# data11 = {'age': 77.17775151, 'sex': 1, 'weight_kg': 65.0, 'height_cm': 168.0, 'medication': 1, 'waiting_time': 7, 'bmd': 0.73009998}
-
-# p = projects()
-# p.project1()
-# print("this is info: ",p.project1.data_info())
-# print('this ', p.project1.pred_input(data11,'processData'))
 
 
