@@ -1,12 +1,6 @@
 from django.db import models
 import json
-# import pickle
-# pip install pandas
-# pip install numpy
-# pip install scikit-learn
-
-
-
+import os
 import pandas as pd
 import numpy as np
 import math
@@ -15,6 +9,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+
 
 
 class project_model:
@@ -119,16 +114,14 @@ class project_model:
 
 
 
-
-
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # For Project directory Path
 
 class projects:
-
-
     def project1(self):
+        path = os.path.join(BASE_DIR, 'DataSets', 'bmd.csv') # Path of dataset on DataSets directory
+    #    path = 'E:\project\Internship\Project\Intern_Project\DataSets\bmd.csv'         #Datasets Path
+        
         projectName = 'Predict fracture or not using KNN'
-        path = 'DataSets\bmd.csv'                       #Datasets Path
         self.project1 = project_model(path)
         self.project1.projectName(projectName)
         self.project1.mapToNumber('sex','medication')
@@ -138,9 +131,10 @@ class projects:
         self.project1.trainModel(KNeighborsClassifier(n_neighbors=12))
 
     def project2(self):
-
+        path = os.path.join(BASE_DIR, 'DataSets', 'churn_data.csv') # Path of dataset on DataSets directory
+    #    path = 'E:\project\Internship\Project\Intern_Project\DataSets\churn_data.csv'         #Datasets Path
+        
         projectName = 'Customer Churn Prediction using Logistic Regression'
-        path = "DataSets\churn_data.csv"                  # DataSets Path
         self.project2 = project_model(path)
         self.project2.projectName(projectName)
         self.project2.toNum('TotalCharges')
